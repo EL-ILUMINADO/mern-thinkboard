@@ -1,0 +1,21 @@
+{
+  "name": "mern-notes-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "npm run start --prefix backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EL-ILUMINADO/mern-thinkboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EL-ILUMINADO/mern-thinkboard/issues"
+  },
+  "homepage": "https://github.com/EL-ILUMINADO/mern-thinkboard#readme",
+  "description": ""
+}
