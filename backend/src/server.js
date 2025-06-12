@@ -40,7 +40,7 @@ if (process.env.NODE_ENV === "production") {
 connectDB()
   .then(() => {
     app.listen(PORT, () => {
-      console.log(`Server started on PORT: ${PORT}`);
+      console.log("Server started on PORT:", PORT);
     });
   })
   .catch((err) => {
