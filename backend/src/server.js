@@ -37,8 +37,13 @@ if (process.env.NODE_ENV === "production") {
 
 // An endpoint is a combination of a URL + HTTP method that lets the client interact with a specific resource
 
-connectDB().then(() => {
-  app.listen(5001, () => {
-    console.log("server started on PORT:", PORT);
+connectDB()
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(`Server started on PORT: ${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.error("Failed to connect to DB:", err);
+    process.exit(1);
   });
-});
