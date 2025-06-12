@@ -26,11 +26,11 @@ export const createNote = async (req, res) => {
     const { title, content } = req.body;
     const note = new Note({ title, content });
 
-    const saveNote = await note.save();
-    res.sendStatus(201).json(saveNote);
+    const savedNote = await note.save();
+    return res.status(201).json(savedNote);
   } catch (error) {
     console.error("Error in createNote Controller", error);
-    res.status(500).json();
+    return res.status(500).json({ message: "Internal server error" });
   }
 };
 
